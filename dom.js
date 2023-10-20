@@ -15,3 +15,13 @@ DOMSelectors.h2s.forEach(
     (el) => el.textContent = DOMSelectors.firstName.value
     );
 }); */
+
+const DOMSelectors = {
+    button:document.getElementById("btn"),
+    text: document.querySelector("#text"),
+    input:document.querySelector('#input'),
+};
+DOMSelectors.button.addEventListener("click", function () {
+    let input = DOMSelectors.input.value;
+    DOMSelectors.box.insertAdjacentHTML("afterend", '<p> ${input} </p>');
+});
