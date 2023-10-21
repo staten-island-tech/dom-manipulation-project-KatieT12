@@ -16,12 +16,12 @@ DOMSelectors.h2s.forEach(
     );
 }); */
 
-const DOMSelectors = {
+/*const DOMSelectors = {
     button:document.getElementById("btn"),
-    text: document.querySelector("#text"),
+    text:document.querySelector("#text"),
     input:document.querySelector('#input'),
 };
 DOMSelectors.button.addEventListener("click", function () {
     let input = DOMSelectors.input.value;
-    DOMSelectors.box.insertAdjacentHTML("afterend", '<p> ${input} </p>');
-});
+    DOMSelectors.box.insertAdjacentHTML("afterend", '<p>'+ input +'</p>');
+}); */
