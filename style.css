@@ -9,8 +9,13 @@ h1{
 card{
     align-items: center;
 }*/
+p{
+    font-size: 4vh;
+    color: black;
+    text-align: center;
+
+}
 #container-box {
-    background-color: rgb(120, 60, 117);
     font-size: 2vh;
     color: black;
     text-align: center;
