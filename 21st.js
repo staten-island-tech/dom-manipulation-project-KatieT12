@@ -35,7 +35,7 @@ const DOMSelectors = {
 ///
 
 function addCard(){
-    document.querySelector("card").insertAdjacentHTML(
+    document.querySelector("card").insertAdjacentElement(
        ("beforeend", 
         `<div class = "card">
         <h3>${inputTitle}</h3>
@@ -45,10 +45,12 @@ function addCard(){
     ))}
 
 
-    DOMSelectors.button.addEventListener("click", function(event){
+    DOMSelectors.button.addEventListener("submit", function(){
+        preventDefault();
+        DOMSelectors.inputTitle.value = " "; 
+        DOMSelectors.inputImage.value = " "; 
+        DOMSelectors.inputAuthor.value = " "; 
         addCard();
-        form.clear();
-        event.preventDefault();
     }); 
 
 {/*  DOMSelectors.button.addEventListener("click", function(event){
