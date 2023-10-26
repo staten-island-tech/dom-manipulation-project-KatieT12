@@ -1,11 +1,11 @@
 
 const DOMSelectors = {
-    button: document.getElementById("btn"),
+    submitbtn: document.getElementById("#btn"),
+    removebtn: document.getElementById("#Remove"),
     box: document.getElementById("container-box"),
     inputTitle: document.querySelector('inputTitle'),
     inputAuthor: document.querySelector('inputAuthor'),
     form: document.querySelector("#form"),
-    firstName: document.querySelector(".first-name"),
     h3s:document.querySelectorAll("h3"),
     h4s:document.querySelectorAll("h4"),
     card:document.querySelector("card"),
@@ -14,8 +14,7 @@ const DOMSelectors = {
     
 };
 
-/* DOMSelectors.button.addEventListener("click", function(event){
-    event.preventDefault();
+/*DOMSelectors.submitbtn.addEventListener("click", function(){
     console.log(DOMSelectors.inputTitle);
     console.log(DOMSelectors.inputImage.value);
     console.log(DOMSelectors.inputAuthor.value);
@@ -28,32 +27,39 @@ const DOMSelectors = {
     DOMSelectors.h4s.forEach(
         (el) => el.textContent = DOMSelectors.inputImage.value
         );
-        DOMSelectors.inputTitle.value = " "; 
-        DOMSelectors.inputAuthor.value = " "; 
-        DOMSelectors.inputImage.value = " "; 
     });  */
 ///
 
 function addCard(){
-    document.querySelector("card").insertAdjacentElement(
-       ("beforeend", 
+    document.querySelector(".card").insertAdjacentHTML(
+       ("afterend", 
         `<div class = "card">
         <h3>${inputTitle}</h3>
         <h4>${inputImage}</h4>
-        <img src=${inputImage} alt = "book cover"> </img>
+        <img src=${inputImage}> </img>
     </div>`
     ))}
+function clearFields(){
+        document.querySelector(".card").insertAdjacentElement(
+           ("afterend", 
+            `<div class = "card">
+            <h3>" "</h3>
+            <h4>" "</h4>
+            <img src=" "> </img>
+        </div>`
+        ))}
 
 
-    DOMSelectors.button.addEventListener("submit", function(){
-        preventDefault();
-        DOMSelectors.inputTitle.value = " "; 
-        DOMSelectors.inputImage.value = " "; 
-        DOMSelectors.inputAuthor.value = " "; 
+    DOMSelectors.submitbtn.addEventListener("submit", function(event){
         addCard();
+        event.preventDefault();
+        
+    }); 
+    DOMSelectors.removebtn.addEventListener("click", function(){
+        clearFields();
     }); 
 
-{/*  DOMSelectors.button.addEventListener("click", function(event){
+/*  DOMSelectors.button.addEventListener("click", function(event){
     let input = DOMSelectors.input.value;
     DOMSelectors.box.insertAdjacentHTML("afterend", 
     <div class = "card">
@@ -67,4 +73,10 @@ console.log(DOMSelectors.input.value);
 DOMSelectors.h3s.forEach(
     (el) => el.textContent = DOMSelectors.input.value
     );
-}); */}
+}); */
+// WHAT YOU NEED
+//const Album = makeAlbum()
+//addCard(Album)
+//clearFields()
+//addRemoveButtons -> addEventlistener to each query, forEach
+//dont use onclick 
