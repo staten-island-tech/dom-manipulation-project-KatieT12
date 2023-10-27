@@ -1,17 +1,17 @@
 
 const DOMSelectors = {
-    submitbtn: document.getElementById("#btn"),
-    removebtn: document.getElementById("#Remove"),
-    box: document.getElementById("container-box"),
-    inputTitle: document.getElementById('#inputTitle'),
-    inputAuthor: document.getElementById('#inputAuthor'),
-    form: document.querySelector("#form"),
-    h3s:document.getElementsByClassName(".title"),
-    h4s:document.getElementsByClassName(".author"),
-    card:document.getElementById("#card"),
-    inputImage:document.getElementsByClassName('.cover'),
-
-    
+    submitbtn: document.getElementById("submit"),
+    removebtn: document.getElementById("Remove"),
+    inputTitle: document.getElementById('inputTitle'),
+    inputAuthor: document.getElementById('inputAuthor'),
+    inputImage:document.getElementById('inputImage'),
+    form: document.getElementsByClassName("form"),
+    h3s:document.getElementsByClassName("title"),
+    h4s:document.getElementsByClassName("author"),
+    card:document.getElementsByClassName("card"),
+// if using querySelectors ->
+    // id use period
+    // class use tag
 };
 
 /*DOMSelectors.submitbtn.addEventListener("click", function(){
@@ -49,12 +49,11 @@ function clearFields(){
         </div>`
         )}
 
-
     DOMSelectors.submitbtn.addEventListener("submit", function(event){
          event.preventDefault();
          addCard();       
     }); 
-    DOMSelectors.removebtn.addEventListener("click", function(event){
+    DOMSelectors.removebtn.addEventListener("remove", function(event){
         event.preventDefault();
         clearFields();
     }); 

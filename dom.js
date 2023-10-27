@@ -1,4 +1,4 @@
- const form = document.querySelector("#form");
+ /*const form = document.querySelector("#form");
 console.log(form);
 const DOMSelectors = {
     form: document.querySelector("#form"),
@@ -31,3 +31,14 @@ DOMSelectors.button.addEventListener("click", function () {
 //clearFields()
 //addRemoveButtons -> addEventlistener to each query, forEach
 //dont use onclick 
+
+// remove button, put after adding all the cards
+function remove(){
+    let btns = document.querySelectorAll('button');
+    btns.forEach((button) => button.addEventListener('click', function(event){
+        console.log(event.target.parentElement);
+        /*console.log(event.target.parentElement.parentelement);*/
+    })
+    );
+}
+remove();
