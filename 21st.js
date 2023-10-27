@@ -3,13 +3,13 @@ const DOMSelectors = {
     submitbtn: document.getElementById("#btn"),
     removebtn: document.getElementById("#Remove"),
     box: document.getElementById("container-box"),
-    inputTitle: document.querySelector('inputTitle'),
-    inputAuthor: document.querySelector('inputAuthor'),
+    inputTitle: document.getElementById('#inputTitle'),
+    inputAuthor: document.getElementById('#inputAuthor'),
     form: document.querySelector("#form"),
-    h3s:document.querySelectorAll("h3"),
-    h4s:document.querySelectorAll("h4"),
-    card:document.querySelector("card"),
-    inputImage:document.querySelector('link'),
+    h3s:document.getElementsByClassName(".title"),
+    h4s:document.getElementsByClassName(".author"),
+    card:document.getElementById("#card"),
+    inputImage:document.getElementsByClassName('.cover'),
 
     
 };
@@ -34,28 +34,28 @@ function addCard(){
     document.querySelector(".card").insertAdjacentHTML(
        ("afterend", 
         `<div class = "card">
-        <h3>${inputTitle}</h3>
-        <h4>${inputImage}</h4>
+        <h3 class="title">${inputTitle}</h3>
+        <h4 class="author">${inputImage}</h4>
         <img src=${inputImage}> </img>
     </div>`
     ))}
 function clearFields(){
         document.querySelector(".card").insertAdjacentElement(
-           ("afterend", 
+           "afterend", 
             `<div class = "card">
-            <h3>" "</h3>
-            <h4>" "</h4>
+            <h3 class="title">" "</h3>
+            <h4 class="author">" "</h4>
             <img src=" "> </img>
         </div>`
-        ))}
+        )}
 
 
     DOMSelectors.submitbtn.addEventListener("submit", function(event){
-        addCard();
-        event.preventDefault();
-        
+         event.preventDefault();
+         addCard();       
     }); 
-    DOMSelectors.removebtn.addEventListener("click", function(){
+    DOMSelectors.removebtn.addEventListener("click", function(event){
+        event.preventDefault();
         clearFields();
     }); 
 
