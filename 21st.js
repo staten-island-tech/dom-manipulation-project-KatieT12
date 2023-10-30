@@ -8,7 +8,7 @@ const DOMSelectors = {
     form: document.getElementsByClassName("form"),
     h3s:document.getElementsByClassName("title"),
     h4s:document.getElementsByClassName("author"),
-    card:document.getElementsByClassName("card"),
+    card:document.querySelector(".card"),
 // if using querySelectors ->
     // id use period
     // class use tag
@@ -31,15 +31,16 @@ const DOMSelectors = {
 ///
 
 function addCard(){
-    const card = document.getElementsByClassName("card")
-    card.insertAdjacentHTML(
-       ("afterend", 
+    document.querySelector(".card").insertAdjacentHTML(
+       "afterend", 
         `<div class = "card">
         <h3 class="title">${inputTitle}</h3>
         <h4 class="author">${inputImage}</h4>
         <img src=${inputImage}> </img>
+        <button type ="button" id="Remove">Remove Book</button>
     </div>`
-    ))};
+
+    )};
 
 function clearFields(){
         document.getElementsByClassName("card").insertAdjacentElement(
