@@ -34,9 +34,9 @@ function addCard(){
     document.querySelector(".card").insertAdjacentHTML(
        "afterend", 
         `<div class = "card">
-        <h3 class="title">${inputTitle}</h3>
-        <h4 class="author">${inputImage}</h4>
-        <img src=${inputImage}> </img>
+        <h3 class="title">${DOMSelectors.inputTitle.value}</h3>
+        <h4 class="author">${DOMSelectors.inputAuthor.value}</h4>
+        <img src=${DOMSelectors.inputImage.value}> </img>
         <button type ="button" id="Remove">Remove Book</button>
     </div>`
 
@@ -56,7 +56,7 @@ function clearFields(){
          event.preventDefault();
          addCard();       
     }); 
-    DOMSelectors.removebtn.addEventListener("remove", function(event){
+    DOMSelectors.removebtn.addEventListener("click", function(event){
         event.preventDefault();
         clearFields();
     }); 
