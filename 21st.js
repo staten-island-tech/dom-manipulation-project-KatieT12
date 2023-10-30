@@ -31,25 +31,27 @@ const DOMSelectors = {
 ///
 
 function addCard(){
-    document.querySelector(".card").insertAdjacentHTML(
+    const card = document.getElementsByClassName("card")
+    card.insertAdjacentHTML(
        ("afterend", 
         `<div class = "card">
         <h3 class="title">${inputTitle}</h3>
         <h4 class="author">${inputImage}</h4>
         <img src=${inputImage}> </img>
     </div>`
-    ))}
+    ))};
+
 function clearFields(){
-        document.querySelector(".card").insertAdjacentElement(
-           "afterend", 
+        document.getElementsByClassName("card").insertAdjacentElement(
+           ("afterend", 
             `<div class = "card">
             <h3 class="title">" "</h3>
             <h4 class="author">" "</h4>
             <img src=" "> </img>
         </div>`
-        )}
-
-    DOMSelectors.submitbtn.addEventListener("submit", function(event){
+        ))};
+        
+    DOMSelectors.submitbtn.addEventListener("click", function(event){
          event.preventDefault();
          addCard();       
     }); 
