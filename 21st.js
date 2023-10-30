@@ -42,7 +42,7 @@ function addCard(){
 
     )};
 
-function clearFields(){
+function deleteCard(){
         document.getElementsByClassName("card").insertAdjacentElement(
            ("afterend", 
             `<div class = "card">
@@ -50,15 +50,16 @@ function clearFields(){
             <h4 class="author">" "</h4>
             <img src=" "> </img>
         </div>`
-        ))};
+        ))}; 
         
     DOMSelectors.submitbtn.addEventListener("click", function(event){
          event.preventDefault();
-         addCard();       
+         addCard();     
+         clearFields();  
     }); 
     DOMSelectors.removebtn.addEventListener("click", function(event){
         event.preventDefault();
-        clearFields();
+        deletecard();
     }); 
 
 /*  DOMSelectors.button.addEventListener("click", function(event){
