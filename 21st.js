@@ -43,23 +43,22 @@ function addCard(){
     )};
 
 function deleteCard(){
-        document.getElementsByClassName("card").insertAdjacentElement(
-           ("afterend", 
+        document.querySelector("card").insertAdjacentHTML(
+           "afterend", 
             `<div class = "card">
-            <h3 class="title">" "</h3>
-            <h4 class="author">" "</h4>
+            <h3 class="title">"Title"</h3>
+            <h4 class="author">"Author"</h4>
             <img src=" "> </img>
         </div>`
-        ))}; 
+        )}; 
         
     DOMSelectors.submitbtn.addEventListener("click", function(event){
          event.preventDefault();
          addCard();     
-         clearFields();  
     }); 
     DOMSelectors.removebtn.addEventListener("click", function(event){
         event.preventDefault();
-        deletecard();
+        deleteCard();
     }); 
 
 /*  DOMSelectors.button.addEventListener("click", function(event){
