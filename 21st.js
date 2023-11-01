@@ -31,7 +31,7 @@ const DOMSelectors = {
 ///
 
 function addCard(){
-    document.querySelector(".card").insertAdjacentHTML(
+    DOMSelectors.card.insertAdjacentHTML(
        "afterend", 
         `<div class = "card" id=container>
         <h3 class="title">${DOMSelectors.inputTitle.value}</h3>
