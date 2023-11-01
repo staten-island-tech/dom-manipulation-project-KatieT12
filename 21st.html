@@ -10,13 +10,13 @@
     <section id="box">
     <form action="" class="form">
         <label for="inputTitle">Title of the Book</label>
-        <input type="text" id="inputTitle"/> <br>
+        <input type="text" onfocus="inputTitle.value=''" id="inputTitle"/> <br>
 
         <label for="inputImage">Insert Image Address</label>
-        <input type="text" id="inputImage"/> <br>
+        <input type="text" onfocus="inputImage.value=''" id="inputImage"/> <br>
 
         <label for="inputAuthor">Author's Name</label>
-        <input type="text" id="inputAuthor"/><br>
+        <input type="text" onfocus="inputAuthor.value=''" id="inputAuthor"/><br>
 
     <div class = "form-submit">
         <input type="submit" value="Enter" id="submit">
@@ -27,7 +27,7 @@
 
     <div class="card">
         <h3 class="title"></h3>
-        <img class="cover" src="" alt="Book Cover">
+        <img class="cover" src="" alt="Book Cover"></img>
         <h4 class="author"></h4>
         <button type ="button" id="Remove">Remove Book</button>
     </div>
