@@ -1,7 +1,7 @@
 
 const DOMSelectors = {
-    submitbtn: document.getElementById("submit"),
     removebtn: document.getElementById("Remove"),
+    submitbtn: document.getElementById("submit"),
     inputTitle: document.getElementById('inputTitle'),
     inputAuthor: document.getElementById('inputAuthor'),
     inputImage:document.getElementById('inputImage'),
@@ -33,16 +33,16 @@ const DOMSelectors = {
 function addCard(){
     document.querySelector(".card").insertAdjacentHTML(
        "afterend", 
-        `<div class = "card">
+        `<div class = "card" id=container>
         <h3 class="title">${DOMSelectors.inputTitle.value}</h3>
         <h4 class="author">${DOMSelectors.inputAuthor.value}</h4>
         <img src=${DOMSelectors.inputImage.value}> </img>
-        <button type ="button" id="Remove">Remove Book</button>
+        <button type ="button" class="Remove">Remove Book</button>
     </div>`
 
     )};
 
-function deleteCard(){
+/*function deleteCard(){
         document.querySelector("card").insertAdjacentHTML(
            "afterend", 
             `<div class = "card">
@@ -50,16 +50,20 @@ function deleteCard(){
             <h4 class="author">"Author"</h4>
             <img src=" "> </img>
         </div>`
-        )}; 
+        )}; */
         
     DOMSelectors.submitbtn.addEventListener("click", function(event){
          event.preventDefault();
          addCard();     
     }); 
-    DOMSelectors.removebtn.addEventListener("click", function(event){
-        event.preventDefault();
-        deleteCard();
+    
+    /* const element = document.getElementById("container"); */
+    const removebtn = document.getElementById("Remove");
+    removebtn.addEventListener("click", function(){
+        DOMSelectors.card.remove();
     }); 
+
+    
 
 /*  DOMSelectors.button.addEventListener("click", function(event){
     let input = DOMSelectors.input.value;
