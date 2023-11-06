@@ -1,6 +1,6 @@
 
 const DOMSelectors = {
-    removebtn: document.getElementById("Remove"),
+    removebtn: document.querySelectorAll(".Remove"),
     submitbtn: document.getElementById("submit"),
     inputTitle: document.getElementById('inputTitle'),
     inputAuthor: document.getElementById('inputAuthor'),
@@ -31,13 +31,13 @@ const DOMSelectors = {
 ///
 
 function addCard(){
-    DOMSelectors.card.insertAdjacentHTML(
+    document.querySelector(".card").insertAdjacentHTML(
        "afterend", 
         `<div class = "card" id=container>
         <h3 class="title">${DOMSelectors.inputTitle.value}</h3>
         <h4 class="author">${DOMSelectors.inputAuthor.value}</h4>
         <img src=${DOMSelectors.inputImage.value}> </img>
-        <button type ="button" class="Remove">Remove Book</button>
+        <button type ="button" id="Remove">Remove Book</button>
     </div>`
 
     )};
@@ -58,10 +58,13 @@ function addCard(){
     }); 
     
     /* const element = document.getElementById("container"); */
-    const removebtn = document.getElementById("Remove");
-    removebtn.addEventListener("click", function(){
+    const removebtn = document.querySelectorAll(".Remove");
+    removebtn
+    .forEach(button => {
+    button.addEventListener("click", function(){
         DOMSelectors.card.remove();
-    }); 
+    })
+});
 
     
 
