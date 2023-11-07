@@ -5,10 +5,10 @@ const DOMSelectors = {
     inputTitle: document.getElementById('inputTitle'),
     inputAuthor: document.getElementById('inputAuthor'),
     inputImage:document.getElementById('inputImage'),
-    form: document.getElementsByClassName("form"),
     h3s:document.getElementsByClassName("title"),
     h4s:document.getElementsByClassName("author"),
     card:document.querySelector(".card"),
+    form: document.querySelector("form"),
 // if using querySelectors ->
     // id use period
     // class use tag
@@ -31,40 +31,42 @@ const DOMSelectors = {
 ///
 
 function addCard(){
-    document.querySelector(".card").insertAdjacentHTML(
+    DOMSelectors.card.insertAdjacentHTML(
        "afterend", 
-        `<div class = "card" id=container>
+        `<div class = "card">
         <h3 class="title">${DOMSelectors.inputTitle.value}</h3>
         <h4 class="author">${DOMSelectors.inputAuthor.value}</h4>
         <img src=${DOMSelectors.inputImage.value}> </img>
-        <button type ="button" id="Remove">Remove Book</button>
+        <button type ="button" class="Remove">DELETE BOOK</button>
     </div>`
 
     )};
-
-/*function deleteCard(){
-        document.querySelector("card").insertAdjacentHTML(
-           "afterend", 
-            `<div class = "card">
-            <h3 class="title">"Title"</h3>
-            <h4 class="author">"Author"</h4>
-            <img src=" "> </img>
-        </div>`
-        )}; */
+    function deleteCard(){
+        let removebuttons = document.querySelectorAll(".Remove")
+        removebuttons.forEach((element) => element.addEventListener('click', function(){
+                element.parentElement.remove();
+            }));
+         };
         
-    DOMSelectors.submitbtn.addEventListener("click", function(event){
+    function clearFields(){
+        inputTitle.value = "";
+        inputAuthor.value = "";
+        inputImage.value="";
+    };
+    DOMSelectors.form.addEventListener("submit", function(event){
          event.preventDefault();
-         addCard();     
+         addCard();   
+         clearFields();
+         deleteCard();  
     }); 
     
     /* const element = document.getElementById("container"); */
-    const removebtn = document.querySelectorAll(".Remove");
+  /*   const removebtn = document.querySelectorAll(".Remove");
+    const card = document.querySelector(".card");
     removebtn
-    .forEach(button => {
-    button.addEventListener("click", function(){
-        DOMSelectors.card.remove();
-    })
-});
+    .forEach(element => {
+        element.addEventListener("click", deleteCard);
+}); */
 
     
 

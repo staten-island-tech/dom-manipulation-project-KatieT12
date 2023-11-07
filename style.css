@@ -61,3 +61,6 @@ img{
 a{
   color: rgb(27, 41, 53);
 }
+button.Remove{
+    background-color: rgb(255, 163, 163);
+}
