@@ -38,6 +38,7 @@ function addCard(){
         <h4 class="author">${DOMSelectors.inputAuthor.value}</h4>
         <img src=${DOMSelectors.inputImage.value}> </img>
         <button type ="button" class="Remove">DELETE BOOK</button>
+        <br>
     </div>`
 
     )};

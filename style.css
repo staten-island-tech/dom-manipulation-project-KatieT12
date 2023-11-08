@@ -9,23 +9,23 @@ h1{
 card{
     align-items: center;
 }*/
-body,
-html,
-*{    box-sizing: border-box;
+body
+{    box-sizing: border-box;
+    margin: 0;
+    padding: 10;
+    background-image:url(pexels-gül-işık-2128249.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
     margin: 0;
     padding: 10;
 }
 
-p{
-    font-size: 4vh;
-    color: black;
-    text-align: center;
-
-}
 .form {
-    font-size: 2vh;
-    color: black;
+    font-size: 3vh;
+    color: rgb(0, 0, 0);
     text-align: center;
+    background-color: rgb(123, 108, 89);
 }
 .card{
 display: flex;
@@ -34,23 +34,26 @@ align-items: center;
 justify-content: space-around;
 border-radius: 10px;
 margin-bottom: 40px;
+background-color: rgb(123, 108, 89);
 }
 img{
-    width: 20%
+    width: 30%;
+    margin-bottom: 5px;
 }
 
 .title{
     font-size: 1rem;
-    margin-top: 2rem;
-    color: rgb(27, 41, 53);
+    color: rgb(0, 0, 0);
 }
 .author{
     font-size: 1rem;
+    margin-top: 1px;
+    margin-bottom: 5px;
 
 }
 .container{
     display: flex;
-    width: 90%;
+    width: 50%;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 5rem auto;
@@ -59,7 +62,7 @@ img{
     }
 
 a{
-  color: rgb(27, 41, 53);
+  color: rgb(231, 231, 231);
 }
 button.Remove{
     background-color: rgb(255, 163, 163);

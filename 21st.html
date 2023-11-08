@@ -4,33 +4,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p id="text">Books</p>
-    <section id="box">
+    <div class = "form-submit">
     <form action="" class="form">
+        <p id="text">Books</p>
         <label for="inputTitle">Title of the Book</label>
-        <input type="text" onfocus="inputTitle.value=''" id="inputTitle"/> <br>
+        <input type="text" onfocus="inputTitle.value=''" id="inputTitle"/> <br><br>
 
         <label for="inputImage">Insert Image Address</label>
-        <input type="text" onfocus="inputImage.value=''" id="inputImage"/> <br>
+        <input type="text" onfocus="inputImage.value=''" id="inputImage"/> <br><br>
 
         <label for="inputAuthor">Author's Name</label>
-        <input type="text" onfocus="inputAuthor.value=''" id="inputAuthor"/><br>
-
-    <div class = "form-submit">
+        <input type="text" onfocus="inputAuthor.value=''" id="inputAuthor"/><br><br>
         <input type="submit" value="Enter" id="submit">
-    </div>
-
+    <br>
     </form>
-    </section>
+</div>
 
+<div class = "container">
     <div class="card">
-        <h3 class="title"></h3>
-        <img class="cover" src="" alt="Book Cover"></img>
-        <h4 class="author"></h4>
-        <button type ="button" id="Remove">DELETE BOOK</button>
     </div>
+</div>
     
     <script src = "21st.js"></script>
 </body>
