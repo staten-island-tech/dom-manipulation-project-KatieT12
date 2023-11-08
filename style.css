@@ -13,7 +13,7 @@ body
 {    box-sizing: border-box;
     margin: 0;
     padding: 10;
-    background-image:url(pexels-gül-işık-2128249.jpg);
+    background-image:url(pexels-luis-zheji-1662277.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
@@ -23,9 +23,9 @@ body
 
 .form {
     font-size: 3vh;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
-    background-color: rgb(123, 108, 89);
+    background-color: rgb(53, 11, 3);
 }
 .card{
 display: flex;
@@ -34,7 +34,7 @@ align-items: center;
 justify-content: space-around;
 border-radius: 10px;
 margin-bottom: 40px;
-background-color: rgb(123, 108, 89);
+background-color: rgb(53, 11, 3);
 }
 img{
     width: 30%;
@@ -43,17 +43,18 @@ img{
 
 .title{
     font-size: 1rem;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 .author{
     font-size: 1rem;
     margin-top: 1px;
     margin-bottom: 5px;
+    color: rgb(255, 255, 255);
 
 }
 .container{
     display: flex;
-    width: 50%;
+    width: 90%;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 5rem auto;
