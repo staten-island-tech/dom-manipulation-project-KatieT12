@@ -1,61 +1,35 @@
-<!-- <html lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Something</h1>
-    <form action="" id="form">
-        <label for="Name">Name</label>
-        <input type=submit">
-        <button type="button" id = "btn">Submit</button>
-    </form>
-    <h2></h2>
-    <h2></h2>
-    <h2></h2>
-    <h2></h2>
-    <h2></h2>
-    <h2></h2>  
- <div id="form">
-        <p id = "text"> this is a big white box, now go look at console</p>
-        <button type="button" id="btn">Click Me!</button>
-        <ul>
-            <li class="point">1</li>
-            <li class="point" id="pointTwo">2</li>
-            <li class="point">3</li>
-        </ul>
-    </div> 
-    <script src = "dom.js"></script>
-    <script src = "index.js"></script>
-    <h1>Books</h1>
-    <form action="" id="form">
-        <label for="title">Book Title</label>
-        <input type= "text">
-        <br>
-        <br>
-        <label for="author">Author</label>
-        <input type= "text">
-        <br>
-        <br>
-        <label for="bookcover">Book Cover</label>
-        <input type= "text">
-        <button type="button" id = "btn">Submit</button>
-    </form>
-<p></p>
-    <div class="card">
-        <h3 class="title" src=""></h3>
-        <img class="cover" src="" alt="Book Cover">
-        <h4 class="author"><a href="">Author</a></h4>
-            </div>
-</body>
-</html> -->\
+    <div class = "form-submit">
+    <form action="" class="form">
+        <p id="text">Books</p>
+        <label for="inputTitle">Title of the Book</label>
+        <input type="text" onfocus="inputTitle.value=''" id="inputTitle"/> <br><br>
 
-<!-- <li><button>Click Me 1</button></li> 
-<li><button>Click Me 2</button></li>
-<li><button>Click Me 3</button></li>
-<li><button>Click Me 4</button></li>
-<li><button>Click Me 5</button></li>
-<li><button>Click Me 6</button></li>
-<li><button>Click Me 7</button></li> -->
+        <label for="inputImage">Insert Image Address</label>
+        <input type="text" onfocus="inputImage.value=''" id="inputImage"/> <br><br>
+
+        <label for="inputAuthor">Author's Name</label>
+        <input type="text" onfocus="inputAuthor.value=''" id="inputAuthor"/><br><br>
+        <input type="submit" value="Enter" id="submit">
+    <br>
+    </form>
+</div>
+
+<div class = "container">
+    <div class="card">
+    </div>
+</div>
+    
+    <script src = "21st.js"></script>
+</body>
+</html>
