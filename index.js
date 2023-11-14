@@ -56,7 +56,7 @@ function addCard(){
     };
     DOMSelectors.form.addEventListener("submit", function(event){
          event.preventDefault();
-         addCard();   
+         addCard();
          clearFields();
          deleteCard();  
     }); 
