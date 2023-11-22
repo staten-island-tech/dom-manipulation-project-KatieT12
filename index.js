@@ -9,6 +9,7 @@ const DOMSelectors = {
     h4s:document.getElementsByClassName("author"),
     card:document.querySelector(".card"),
     form: document.querySelector("form"),
+    container: document.querySelector(".container")
 // if using querySelectors ->
     // id use period
     // class use tag
@@ -31,8 +32,8 @@ const DOMSelectors = {
 ///
 
 function addCard(){
-    DOMSelectors.card.insertAdjacentHTML(
-       "afterend", 
+    DOMSelectors.container.insertAdjacentHTML(
+       "beforeend", 
         `<div class = "card">
         <h3 class="title">${DOMSelectors.inputTitle.value}</h3>
         <h4 class="author">${DOMSelectors.inputAuthor.value}</h4>
